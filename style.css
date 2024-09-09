@@ -1,0 +1,234 @@
+:root{
+  --color1: #739c21;
+}
+*{
+  font-family: serif;
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: all .5s cubic-bezier(.37,1.14,.26,1.24);
+}
+*::selection{
+  background-color: var(--color1);
+  color: #fff;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+section{
+  padding: 4% 6%;
+  background-size: cover;
+  background-repeat: none;
+}
+.btn{
+  color: #fff;
+  height: 5rem;
+  width: 16rem;
+  outline: none;
+  border: .2rem solid var(--color1);
+  font-size: 2rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+}
+.btn::before,
+.btn::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color1);
+  z-index: -1;
+  transition: all .5s cubic-bezier(.37,1.14,.26,1.24);
+}
+.btn::before{
+  clip-path: polygon(0 0,0 0,0 0);
+}
+.btn:hover::before{
+  clip-path: polygon(0 0,0 100%,100% 0);
+}
+.btn::after{
+  clip-path: polygon(100% 100%,100% 100%,100% 100%);
+}
+.btn:hover::after{
+  clip-path: polygon(100% 0,0 100%,100% 100%);
+}
+.btn:hover{
+  background-color: #739c21;
+  color: blanchedalmond;
+}
+.heading{
+  text-align: center;
+  font-size: 4rem;
+  color: #555;
+  padding: 1rem;
+  padding-top: 5rem;
+}
+.heading i{
+  color: #739c21;
+  font-size: 2rem;
+}
+header{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 1rem 5rem;
+  width: 100%;
+}
+header .navbar ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+header .navbar ul li{
+  margin: 0 1rem;
+}
+header .navbar ul li a{
+  font-size: 2rem;
+  color: #fff;
+  font-style: italic;
+}
+header .navbar ul li a:hover{
+  color: var(--color1);
+}
+.logo{
+  border-radius: 50%;
+}
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/home_Page\ \(1\).png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home .content{
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 225, 255, 0.03);
+  border: 1px solid rgba(255, 225, 255, 0.05);
+  backdrop-filter: blur(11px);
+  box-shadow: 0 20px 50px rgba(40, 113, 85, 0.4);
+  padding: 2rem 1rem;
+  border-radius: 25px;
+}
+.home .content h1{
+  font-family: "Oswald",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7rem;
+  color: #fff;
+}
+.home .content p{
+  font-family: "Montserrat";
+  font-size: 1.4rem;
+  color: white;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  width: 70rem;
+  line-height: 1.5;
+}
+.about{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/About\ \(1\).png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about .row .image{
+  flex: 1 1 40rem;
+  padding: 2rem;
+}
+.about .row .image img{
+  width: 100%
+}
+.about .row .content{
+  flex: 1 1 40rem;
+  padding: 2rem;
+  background: rgba(255, 225, 255, 0.03);
+  border: 1px solid rgba(255, 225, 255, 0.05);
+  backdrop-filter: blur(11px);
+  box-shadow: 0 20px 50px rgba(40, 113, 85, 0.4);
+  padding: 2rem 1rem;
+  flex: 1 1 20rem;
+  border-radius: 25px;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+.about .row .content h3{
+  font-family: "Oswald",sans-serif;
+  font-weight: 300;
+  font-size: 4rem;
+  color: #739c21;
+}
+.about .row .content h5{
+  font-family: "Montserrat";
+  display: inline;
+  font-size: 2.5rem;
+  color: #739c21;
+}
+.about .row .content p{
+  font-family: "Montserrat";
+  display: inline;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem 0;  
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+footer{
+  padding: 7px;
+  display:inline-flexbox;
+  padding: 0;
+  border: none;
+  align-items: center;
+  justify-content: space-around;
+}
+footer ul{
+  padding:10px;
+  font-size: 1.7rem;
+  background-color: #172c39;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+}
+.logo a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.homelogo img{
+  filter: invert(1);
+} 
+
