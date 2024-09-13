@@ -228,7 +228,7 @@ footer ul{
   border-radius: 50%;
 }
 .logo a:hover{
-  background-color:-black;
+  background-color: #172c39;
 }
 .homelogo img{
   filter: invert(1);
