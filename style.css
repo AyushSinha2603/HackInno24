@@ -227,7 +227,9 @@ footer ul{
   margin: 10px;
   border-radius: 50%;
 }
-
+.logo a:hover{
+  background-color:-black;
+}
 .homelogo img{
   filter: invert(1);
 } 
