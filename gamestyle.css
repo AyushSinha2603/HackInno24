@@ -1,0 +1,9 @@
+*{
+  background-color: rgb(32, 30, 30);
+}
+
+.game{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
